@@ -29,12 +29,21 @@
     var turtle;
     var goal;
     var accelerate = false;
+    var enemy;
 
     function preload ()
     {
-        this.load.image('turtle', 'assets/turtle.svg');
-        this.load.image('goal', 'assets/goal.svg');
+        for (const key of ['turtle', 'goal', 'enemy']) {
+            this.load.image(key, `assets/${key}.svg`);
+        }
         this.cameras.main.backgroundColor.setTo(131,112,201); 
+    }
+
+    function addEnemy(scene, x, y) {
+        let enemy = scene.physics.add.image(x, y, 'enemy');
+        enemy.setDrag(300);
+        enemy.setCollideWorldBounds(true);
+        return enemy;
     }
 
     function create ()
@@ -47,9 +56,21 @@
         turtle.setMaxVelocity(600);
         turtle.setCollideWorldBounds(true);
 
-        goal = this.physics.add.image(700, 700, 'goal');
+        enemy = addEnemy(this, 500, 500);
+        this.physics.add.collider(turtle, enemy, reachedEnemy, null, this);
+        addEnemy(this, 200, 200);
+
+        movables = this.physics.add.staticGroup();
+        movables.add(enemy);
+        movables.add(turtle);
+
+        goal = this.physics.add.image(700, 300, 'goal');
         goal.setScale(0.5);
         this.physics.add.overlap(turtle, goal, reachedGoal, null, this);
+
+        platforms = this.physics.add.staticGroup();
+        platforms.add(platforms.scene.add.rectangle(600, 400, 10, 600, 0));
+        this.physics.add.collider(movables, platforms);
         
         this.input.on('pointerdown', function (pointer) {
             moveTo(pointer);
@@ -58,6 +79,7 @@
 
         this.input.on('pointerup', function (pointer) {
             turtle.setAcceleration(0, 0);
+            enemy.setAcceleration(0, 0);
             accelerate = false;
         }, this);
 
@@ -70,9 +92,11 @@
     }
 
     function moveTo(pointer) {
+        turtle.rotation = Phaser.Math.Angle.Between(turtle.x, turtle.y, pointer.x, pointer.y);
         let x = pointer.x - turtle.x;
         let y = pointer.y - turtle.y;
         turtle.setAcceleration(x, y);
+        enemy.setAcceleration(x, y);
     }
 
     function update() {
@@ -80,6 +104,12 @@
 
     function reachedGoal() {
         console.log("jaja");
+    }
+
+    function reachedEnemy() {
+        console.log("neenee");
+        this.cameras.main.shake(300);
+        setTimeout(this.scene.restart.bind(this.scene), 300);
     }
     </script>
 

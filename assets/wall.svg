@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="2260mm" height="2260mm" viewBox="0 0 2260 2260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>A colour coded elevation view for a wall in English Cross Bond.</title>
+<desc>In this elevation view for a wall in English Cross Bond, heading bricks appear in brown, stretching bricks in orange, and queen closers in lilac. The SVG file was written using gedit 2.30.4 on Debian 6.0.7 in April 2013.</desc>
+<style type="text/css">
+.background_css {fill:#dbd6c0;}
+.h_c {fill:url(#h_g);stroke:#c4bc96;stroke-width:1.5;} /* heading brick */
+.s_c {fill:url(#s_g);stroke:#c3c496;stroke-width:1.5;} /* stretching brick */
+.q_c {fill:url(#q_g);stroke:#c4c497;stroke-width:1.5;} /* queen closer */
+</style>
+
+<defs>
+<!-- begin gradients -->
+<linearGradient id="h_g" x1="33%" y1="52%" x2="110%" y2="105%">
+<stop offset="0" stop-color="#a87d5d" />
+<stop offset="1" stop-color="#a86f5d" />
+</linearGradient>
+
+<linearGradient id="q_g" x1="33%" y1="52%" x2="110%" y2="105%">
+<stop offset="0" stop-color="#baa8aa" />
+<stop offset="1" stop-color="#b5a3a6" />
+</linearGradient>
+
+<linearGradient id="s_g" x1="33%" y1="52%" x2="110%" y2="105%">
+<stop offset="0" stop-color="#dc9662" />
+<stop offset="1" stop-color="#dc8062" />
+</linearGradient>
+
+<!-- begin shapes -->
+<rect id="background" class="background_css" width="2260" height="2260" />
+<rect id="s" class="s_c" width="213.5" height="63.5" rx="1.5" />
+<rect id="h" class="h_c" width="101" height="63.5" rx="1.5" />
+<rect id="q" class="q_c" width="44.75" height="63.5" rx="1.5" />
+
+<!-- begin courses -->
+<g id="c0">
+<use x="10.75" y="10.75" xlink:href="#h" />
+<use x="123.25" y="10.75" xlink:href="#q" />
+<use x="179.5" y="10.75" xlink:href="#h" />
+<use x="292" y="10.75" xlink:href="#h" />
+<use x="404.5" y="10.75" xlink:href="#h" />
+<use x="517" y="10.75" xlink:href="#h" />
+<use x="629.5" y="10.75" xlink:href="#h" />
+<use x="742" y="10.75" xlink:href="#h" />
+<use x="854.5" y="10.75" xlink:href="#h" />
+<use x="967" y="10.75" xlink:href="#h" />
+<use x="1079.5" y="10.75" xlink:href="#h" />
+<use x="1192" y="10.75" xlink:href="#h" />
+<use x="1304.5" y="10.75" xlink:href="#h" />
+<use x="1417" y="10.75" xlink:href="#h" />
+<use x="1529.5" y="10.75" xlink:href="#h" />
+<use x="1642" y="10.75" xlink:href="#h" />
+<use x="1754.5" y="10.75" xlink:href="#h" />
+<use x="1867" y="10.75" xlink:href="#h" />
+<use x="1979.5" y="10.75" xlink:href="#h" />
+<use x="2092" y="10.75" xlink:href="#q" />
+<use x="2148.25" y="10.75" xlink:href="#h" />
+</g>
+<g id="c1">
+<use x="10.75" y="10.75" xlink:href="#s" />
+<use x="235.75" y="10.75" xlink:href="#h" />
+<use x="348.25" y="10.75" xlink:href="#s" />
+<use x="573.25" y="10.75" xlink:href="#s" />
+<use x="798.25" y="10.75" xlink:href="#s" />
+<use x="1023.25" y="10.75" xlink:href="#s" />
+<use x="1248.25" y="10.75" xlink:href="#s" />
+<use x="1473.25" y="10.75" xlink:href="#s" />
+<use x="1698.25" y="10.75" xlink:href="#s" />
+<use x="1923.25" y="10.75" xlink:href="#h" />
+<use x="2035.75" y="10.75" xlink:href="#s" />
+</g>
+<g id="c3">
+<use x="10.75" y="10.75" xlink:href="#s" />
+<use x="235.75" y="10.75" xlink:href="#s" />
+<use x="460.75" y="10.75" xlink:href="#s" />
+<use x="685.75" y="10.75" xlink:href="#s" />
+<use x="910.75" y="10.75" xlink:href="#s" />
+<use x="1135.75" y="10.75" xlink:href="#s" />
+<use x="1360.75" y="10.75" xlink:href="#s" />
+<use x="1585.75" y="10.75" xlink:href="#s" />
+<use x="1810.75" y="10.75" xlink:href="#s" />
+<use x="2035.75" y="10.75" xlink:href="#s" />
+</g>
+</defs>
+
+<!-- begin render -->
+<use y="0" xlink:href="#background" />
+<use y="0" xlink:href="#c0" />
+<use y="75" xlink:href="#c1" />
+<use y="150" xlink:href="#c0" />
+<use y="225" xlink:href="#c3" />
+<use y="300" xlink:href="#c0" />
+<use y="375" xlink:href="#c1" />
+<use y="450" xlink:href="#c0" />
+<use y="525" xlink:href="#c3" />
+<use y="600" xlink:href="#c0" />
+<use y="675" xlink:href="#c1" />
+<use y="750" xlink:href="#c0" />
+<use y="825" xlink:href="#c3" />
+<use y="900" xlink:href="#c0" />
+<use y="975" xlink:href="#c1" />
+<use y="1050" xlink:href="#c0" />
+<use y="1125" xlink:href="#c3" />
+<use y="1200" xlink:href="#c0" />
+<use y="1275" xlink:href="#c1" />
+<use y="1350" xlink:href="#c0" />
+<use y="1425" xlink:href="#c3" />
+<use y="1500" xlink:href="#c0" />
+<use y="1575" xlink:href="#c1" />
+<use y="1650" xlink:href="#c0" />
+<use y="1725" xlink:href="#c3" />
+<use y="1800" xlink:href="#c0" />
+<use y="1875" xlink:href="#c1" />
+<use y="1950" xlink:href="#c0" />
+<use y="2025" xlink:href="#c3" />
+<use y="2100" xlink:href="#c0" />
+<use y="2175" xlink:href="#c1" />
+</svg>
+
